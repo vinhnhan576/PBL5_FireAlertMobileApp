@@ -4,6 +4,7 @@
  */
 
 import { Text as DefaultText, useColorScheme, View as DefaultView } from 'react-native';
+import type {Theme} from '@react-navigation/native'
 
 import Colors from '../constants/Colors';
 
@@ -42,3 +43,16 @@ export function View(props: ViewProps) {
 
   return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
 }
+
+export const DarkTheme: Theme = {
+	dark: true,
+	colors: {
+		primary: "rgb(10, 132, 255)",
+		background: "rgb(1, 1, 1)",
+		card: "transparent",
+		text: "rgb(229, 229, 231)",
+		border: "transparent",
+		notification: "rgb(255, 69, 58)",
+	},
+};
+
