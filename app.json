@@ -15,6 +15,9 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "plugins": [
+      "@notifee/react-native"
+    ],
     "ios": {
       "supportsTablet": true
     },
@@ -22,7 +25,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.FireAlertMobileApp"
     },
     "web": {
       "bundler": "metro",
