@@ -8,57 +8,51 @@ import {
   Image,
 } from "react-native";
 import { Feather, Entypo } from "@expo/vector-icons";
+import InfoCard from "./InfoCard";
 
 const Notification = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.container}>
+      <View style={styles.searchbarContainer}>
         <View style={styles.searchBar__unclicked}>
           {/* search Icon */}
           <Feather
             name="search"
-            size={20}
-            color="black"
-            style={{ marginLeft: 1 }}
+            size={25}
+            color="#313131"
+            style={{ marginLeft: 1, paddingLeft: 10 }}
           />
           {/* Input field */}
           <TextInput
             style={styles.input}
             placeholder="Search"
-            //value={searchPhrase}
-            //onChangeText={setSearchPhrase}
-            //   onFocus={() => {
-            //     setClicked(true);
-            //   }}
+            selectionColor={"#EF652A"}
           />
-          {/* cross Icon, depending on whether the search bar is clicked or not */}
-          {/* {clicked && (
-          <Entypo
-            name="cross"
-            size={20}
-            color="black"
-            style={{ padding: 1 }}
-            onPress={() => {
-              setSearchPhrase("");
-            }}
-          />
-        )} */}
         </View>
-        {/* cancel button, depending on whether the search bar is clicked or not */}
-        {/* {clicked && (
-        <View>
-          <Button
-            title="Cancel"
-            onPress={() => {
-              Keyboard.dismiss();
-              setClicked(false);
-            }}
-          ></Button>
-        </View>
-      )} */}
+
         <Image
           source={require("../assets/images/Icon_Filter.png")}
           style={styles.IconFilter}
+        />
+      </View>
+      <View>
+        <InfoCard
+          title="Fire detected"
+          label="22-01-2022"
+          imgSrc={require("../assets/images/fire_alert.gif")}
+          invert={false}
+        />
+        <InfoCard
+          title="Fire detected"
+          label="22-01-2022"
+          imgSrc={require("../assets/images/fire_alert.gif")}
+          invert={false}
+        />
+        <InfoCard
+          title="Fire detected"
+          label="22-01-2022"
+          imgSrc={require("../assets/images/fire_alert.gif")}
+          invert={false}
         />
       </View>
     </View>
@@ -69,18 +63,18 @@ export default Notification;
 // styles
 const styles = StyleSheet.create({
   container: {
-    margin: 15,
-    justifyContent: "flex-start",
+    flex: 1,
+    alignItems: "center",
+  },
+  searchbarContainer: {
     alignItems: "center",
     flexDirection: "row",
-    width: "100%",
   },
   searchBar__unclicked: {
-    padding: 15,
     flexDirection: "row",
-    width: 263,
-    height: 48,
-    backgroundColor: "#d9dbda",
+    width: 270,
+    height: 55,
+    backgroundColor: "white",
     borderRadius: 15,
     alignItems: "center",
   },
@@ -94,13 +88,13 @@ const styles = StyleSheet.create({
   //     justifyContent: "space-evenly",
   //   },
   input: {
-    fontSize: 20,
+    fontSize: 16,
     marginLeft: 10,
-    width: "90%",
+    
   },
   IconFilter: {
-    width: 65,
-    height: 69,
-    paddingTop: 2,
+    width: 82,
+    height: 82,
+    marginTop: 10,
   },
 });
