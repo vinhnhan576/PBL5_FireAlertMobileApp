@@ -57,7 +57,7 @@ export default function TabLiveScreen() {
 	});
 
 	return (
-		<View stlye={styles.container}>
+		<View style={styles.container}>
 			<View style={styles.videoContainer}>
 				<Video
 					ref={video}
